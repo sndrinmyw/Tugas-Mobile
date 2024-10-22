@@ -1,0 +1,25 @@
+class Buku {
+  // Field
+  String title;
+  String author;
+
+  // Konstruktor
+  Buku(this.title, this.author); 
+
+  // Method untuk menampilkan informasi buku
+  void displayInfo() {
+    print('Judul: $title, Penulis: $author');
+  }
+
+  // Method untuk meminjam buku
+  void borrowBook(String borrowerName, String borrowDate, String returnDate) {
+    print('Buku "$title" dipinjam oleh $borrowerName pada $borrowDate dan harus dikembalikan pada $returnDate.');
+  }
+}
+
+void main() {
+  // Contoh penggunaan
+  Buku buku1 = Buku("Belajar Dart", "Jane Doe");
+  buku1.displayInfo(); // Menampilkan informasi buku
+  buku1.borrowBook("Alice", "2023-10-01", "2023-10-15"); // Menampilkan informasi peminjaman
+}
